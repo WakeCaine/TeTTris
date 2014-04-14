@@ -1,0 +1,24 @@
+KLASY:
+1) GAME- g³ówna klasa zbieraj¹ca wszystko. 
+Metody:
+	void Visualise- wyœwietlanie zawartoœci kontenera <<GameMap>>
+	void Running- metoda, w której jest g³ówna pêtla aplikacji.
+	void EventsCheck- zbieranie i reakcja na wystêpuj¹ce zdarzenia(wciœniêcia przycisków)
+
+2) GameMap- kontener zbieraj¹cy opadniête elementy.
+Metody:
+	bool CheckBorders- sprawdza, czy blok nie wyszed³ poza obrêb planszy.
+	void AddBlocks- dodaje nowe elementy do kontenera.
+	bool CheckSpace- pomocna metoda przy wyœwietlaniu elementów, które s¹ w kontenerze.
+
+3) BLOCKS- klasa bazowa z wirtualnymi metodami dla klas pochodnych.
+Metody:
+	virtual void Reset- metoda na wybranie dowolnego po³o¿enia klocka na samym pocz¹tku.
+	virtual void Draw- rysowanie klocka.
+	virtual void Rotate- obrót klocka.
+	virtual void Move- poruszanie w p³aszczyŸnie poziomej.
+	virtual void Auto- automatyczne opadanie klocka.
+	virtual bool BottomCheck- sprawdzenie, czy nie wychodzi poza doln¹ krawêdŸ.
+
+Reszta klas to rodzaje genereowanych klocków.
+
